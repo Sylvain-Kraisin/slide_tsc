@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: sliders_development
+
+test:
+  <<: *default
+  database: sliders_test
+
+production:
+  <<: *default
+  database: sliders_production
+  username: sliders
+  password: <%= ENV['SLIDERS_DATABASE_PASSWORD'] %>
