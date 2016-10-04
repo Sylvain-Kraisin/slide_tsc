@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: sliders_production
-  username: sliders
+  username: koan_dev
   password: <%= ENV['SLIDERS_DATABASE_PASSWORD'] %>
