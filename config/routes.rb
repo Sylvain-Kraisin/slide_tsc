@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'slides/index'
+  root 'slides#index'
 
-  get 'slides/admin'
+  resources :slides
+  get '/admin' => 'slides#admin'
+  post 'slides/publish' => 'slides#publish'
+  post 'slides/unpublish' => 'slides#unpublish'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

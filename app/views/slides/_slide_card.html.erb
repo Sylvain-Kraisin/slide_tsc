@@ -1,0 +1,17 @@
+<% @slides.each do |s| %>
+  <div>
+    <div class="col-xs-12 col-md-5">
+      <div class="col-xs-8">
+        <%= s.id %> <%= s.client_name %>
+      </div>
+      <div class="col-xs-4">
+        <%= image_tag (s.client_logo) %>
+      </div>
+      <article class="margin_top_60"><%= s.description.html_safe %></article>
+    </div>
+
+    <div class="col-xs-12 col-md-7 margin_top_30">
+      <%= image_tag s.image, class:'img-responsive center-block' %>
+    </div>
+  </div>
+<% end %>

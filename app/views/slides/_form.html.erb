@@ -1,0 +1,13 @@
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
+
+<div class="container">
+  <%= simple_form_for @slide do |f| %>
+    <%= f.input :client_name %>
+    <%= f.input :client_logo %>
+    <%= f.input :project_title %>
+    <%= f.input :description, input_html: {class:"tinymce", rows: 4, cols: 120} %>
+    <%= f.input :image %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
